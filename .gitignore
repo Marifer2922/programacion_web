@@ -1,0 +1,21 @@
+# 1. SEGURIDAD: Credenciales bancarias y claves de pasarelas de pago (BAC, Ficohsa)
+.env
+.env.local
+config/pasarela_pagos.json
+
+# 2. RENDIMIENTO: Respaldos gigantescos de base de datos de inventario
+backups/
+*.sql
+*.sqlite
+
+# 3. DEPENDENCIAS Y REGISTROS DEL SERVIDOR:
+node_modules/
+vendor/
+logs/
+*.log
+
+# 4. BASURA DEL SISTEMA OPERATIVO Y CONFIGURACIÓN LOCAL:
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
