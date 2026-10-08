@@ -1,0 +1,78 @@
+/* ==========================================================================
+   1. SISTEMA DE DISEÑO GLOBAL: Paleta cromática y escalas de espaciado
+   ========================================================================== */
+:root {
+    --color-primario: #7f1d1d;     /* Vino tinto gourmet elegante */
+    --color-acento: #f59e0b;       /* Dorado ámbar apetitoso para botones y ofertas */
+    --color-fondo: #fffbeb;        /* Crema marfil cálido (evita el blanco puro que fatiga la vista) */
+    --color-texto: #1c1917;        /* Carbón oscuro para máxima legibilidad según WCAG */
+    --radio-platillo: 12px;        /* Curvatura de esquinas en tarjetas */
+    --espaciado: 1.5rem;           /* 24px relativos (1.5 x 16px base) */
+}
+
+/* ==========================================================================
+   2. ESTILOS GENERALES DEL DOCUMENTO
+   ========================================================================== */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+}
+
+/* ==========================================================================
+   3. TARJETA DE PLATILLO GOURMET (Componente Reutilizable)
+   ========================================================================== */
+.tarjeta-platillo {
+    background-color: #ffffff;
+    border-radius: var(--radio-platillo);
+    padding: var(--espaciado);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    border-left: 6px solid var(--color-primario); /* Acento visual de restaurante */
+    max-width: 380px;
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-platillo__titulo {
+    margin-top: 0;
+    color: var(--color-primario);
+    font-size: 1.3rem;
+}
+
+.tarjeta-platillo__descripcion {
+    color: #57534e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.tarjeta-platillo__precio {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin: 1rem 0;
+}
+
+/* ==========================================================================
+   4. BOTÓN DE ACCIÓN CON MICROINTERACCIÓN
+   ========================================================================== */
+.btn-ordenar {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: 2px solid var(--color-acento);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* Transición fluida de 250ms para todos los cambios de propiedad */
+    transition: all 0.25s ease-in-out;
+}
+
+/* Estado al pasar el cursor (Hover): Invierte contraste y se eleva 2px */
+.btn-ordenar:hover {
+    background-color: var(--color-acento);
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(245, 158, 11, 0.35);
+}
